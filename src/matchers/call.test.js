@@ -1,8 +1,9 @@
 test("toHaveBeenCalled", () => {
   const mockFn = jest.fn();
   mockFn(1);
+  mockFn(1);
   expect(mockFn).toHaveBeenCalled();
-  expect(mockFn).toHaveBeenCalledTimes(1);
+  expect(mockFn).toHaveBeenCalledTimes(2);
   expect(mockFn).toHaveBeenCalledWith(1);
 });
 
